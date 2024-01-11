@@ -6,13 +6,25 @@ import {
   Link,
   useColorMode,
   useColorModeValue,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
 } from '@chakra-ui/react';
+import { useState } from 'react';
+
 import { FaMoon, FaSun, FaBars } from 'react-icons/fa';
 
 const Header = () => {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue('dark', 'light');
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleToggleMenu = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
     <Flex
@@ -59,7 +71,30 @@ const Header = () => {
           variant="ghost"
           color="current"
           icon={<FaBars />}
+          onClick={handleToggleMenu}
         />
+
+        <Modal isOpen={isModalOpen} onClose={handleToggleMenu} size={'full'}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>AaMiR</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Link href="#" display="block" py="1">
+                Home
+              </Link>
+              <Link href="#" display="block" py="1">
+                About
+              </Link>
+              <Link href="#" display="block" py="1">
+                Services
+              </Link>
+              <Link href="#" display="block" py="1">
+                Contact
+              </Link>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </Box>
 
       <Box onClick={toggleColorMode} cursor="pointer">
