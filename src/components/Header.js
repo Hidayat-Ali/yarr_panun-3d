@@ -55,13 +55,10 @@ const Header = () => {
           Home
         </Link>
         <Link href="#" marginRight={4}>
-          About
+          Portfollio
         </Link>
         <Link href="#" marginRight={4}>
-          Services
-        </Link>
-        <Link href="#" marginRight={4}>
-          Contact
+          Projects
         </Link>
       </Box>
 
@@ -83,14 +80,12 @@ const Header = () => {
               <Link href="#" display="block" py="1">
                 Home
               </Link>
+
               <Link href="#" display="block" py="1">
-                About
+                Portfolio
               </Link>
               <Link href="#" display="block" py="1">
-                Services
-              </Link>
-              <Link href="#" display="block" py="1">
-                Contact
+                Projects
               </Link>
             </ModalBody>
           </ModalContent>
