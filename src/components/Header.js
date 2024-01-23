@@ -14,7 +14,6 @@ import {
   ModalBody,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-
 import { FaMoon, FaSun, FaBars } from 'react-icons/fa';
 
 const Header = () => {
@@ -51,17 +50,13 @@ const Header = () => {
         justifyContent={'flex-end'}
         flexGrow={1}
       >
-        <Link href="#" marginRight={4}>
+        <Link href="/" marginRight={4}>
           Home
         </Link>
-        <Link href="#" marginRight={4}>
+        <Link href="/portfolio" marginRight={4}>
           Portfollio
         </Link>
-        <Link href="#" marginRight={4}>
-          Projects
-        </Link>
       </Box>
-
       <Box display={{ base: 'block', md: 'none' }}>
         <IconButton
           aria-label="Toggle menu"
@@ -83,9 +78,6 @@ const Header = () => {
 
               <Link href="#" display="block" py="1">
                 Portfolio
-              </Link>
-              <Link href="#" display="block" py="1">
-                Projects
               </Link>
             </ModalBody>
           </ModalContent>

@@ -4,15 +4,20 @@ import Home from './pages/Home.js';
 import Header from './components/Header';
 import Work from './pages/work.js';
 import Footer from './components/Footer.js';
-
+import Portfollio from './pages/portfolio.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="-webkit-center" fontSize="xl">
-        <Header />
-        <Home />
-        <Work />
-        <Footer />
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfollio />} />
+          </Routes>
+          <Footer />
+        </Router>
       </Box>
     </ChakraProvider>
   );
