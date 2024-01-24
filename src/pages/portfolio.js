@@ -25,7 +25,11 @@ const steps = [
     description:
       "As a 3D artist, I graduated with a stellar 10 CGPA, showcasing my expertise in computer graphics and animation. With hands-on experience in Autodesk Maya and Blender, I've excelled in producing visually striking 3D artworks. My commitment to innovation and accolades in art exhibitions highlight my dedication to pushing creative boundaries.",
   },
-  { title: 'Awards', description: 'Select Rooms' },
+  {
+    title: 'Awards',
+    description:
+      "As a 3D artist with a perfect 10 CGPA, I've garnered recognition for my exceptional work, earning awards such as 'Best Visual Storytelling and Innovative Animation at prestigious art exhibitions. These accolades underscore my commitment to pushing creative boundaries and delivering outstanding contributions in the field of computer graphics and animation.",
+  },
 ];
 const Portfollio = () => {
   const { activeStep } = useSteps({
